@@ -26,3 +26,5 @@ Honesty time: I didn't originally set out to write a historical compression algo
 While bouncing ideas off Gemini late at night, I had what felt like a brilliant "lightbulb" moment: *"What if I just set a static ASCII character as an anchor, calculate the difference of the upcoming characters, and just count how many times that difference repeats?"* My main goal was to keep the logic as simple and the shellcode as tiny as possible. I felt like a genius... right up until I realized I had just accidentally reinvented **DPCM + RLE**, which was already invented by telecom engineers back in the 1970s! :D
 
 Even though I wasn't the first to think of the math, writing this completely from scratch in pure x86-64 Assembly—with zero external libraries—turned out to be an amazing challenge. It works perfectly as a lightweight, stealthy, and zero-dependency evasion tool for C2 communications.
+
+Resource: https://netacoding.com/posts/compressdpcm-rle/
